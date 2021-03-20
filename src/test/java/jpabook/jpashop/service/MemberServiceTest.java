@@ -2,7 +2,6 @@ package jpabook.jpashop.service;
 
 import jpabook.jpashop.domain.Member;
 import jpabook.jpashop.repository.MemberRepository;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -52,7 +51,4 @@ class MemberServiceTest {
         IllegalStateException thrown = assertThrows(IllegalStateException.class, () -> memberService.join(member2));
         assertEquals("이미 존재하는 회원입니다.", thrown.getMessage());
     }
-
-
-
 }
